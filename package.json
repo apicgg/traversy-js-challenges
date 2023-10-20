@@ -4,7 +4,8 @@
   "description": "100 JavaScript challeneges for you to solve",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest"
   },
   "author": "Brad Traversy",
   "license": "MIT",
