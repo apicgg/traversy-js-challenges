@@ -40,9 +40,9 @@ formatPhoneNumber([3, 4, 5, 5, 0, 1, 2, 5, 2, 7]); // => "(345) 501-2527"
 
 ```js
 function formatPhoneNumber(numbers) {
-  const areaCode = numbers.slice(0, 3).join('');
-  const prefix = numbers.slice(3, 6).join('');
-  const lineNumber = numbers.slice(6).join('');
+  const areaCode = numbers.slice(0, 3).join("");
+  const prefix = numbers.slice(3, 6).join("");
+  const lineNumber = numbers.slice(6).join("");
 
   return `(${areaCode}) ${prefix}-${lineNumber}`;
 }
@@ -61,7 +61,7 @@ function formatPhoneNumber(numbers) {
 
 ```js
 function formatPhoneNumber(numbers) {
-  const formatted = numbers.join('');
+  const formatted = numbers.join("");
   return `(${formatted.substring(0, 3)}) ${formatted.substring(
     3,
     6
@@ -83,9 +83,9 @@ One line arrow function:
 
 ```js
 const formatPhoneNumber = (numbers) =>
-  `(${numbers.slice(0, 3).join('')}) ${numbers.slice(3, 6).join('')}-${numbers
+  `(${numbers.slice(0, 3).join("")}) ${numbers.slice(3, 6).join("")}-${numbers
     .slice(6)
-    .join('')}`;
+    .join("")}`;
 ```
 
 ### Explanation
@@ -97,15 +97,15 @@ This is similar to the second solution, but we used an arrow function and Array.
 ### Test Cases
 
 ```js
-test('Format Phone Number', () => {
+test("Format Phone Number", () => {
   expect(formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])).toBe(
-    '(123) 456-7890'
+    "(123) 456-7890"
   );
   expect(formatPhoneNumber([5, 0, 2, 4, 8, 1, 9, 6, 3, 7])).toBe(
-    '(502) 481-9637'
+    "(502) 481-9637"
   );
   expect(formatPhoneNumber([9, 9, 9, 9, 9, 9, 9, 9, 9, 9])).toBe(
-    '(999) 999-9999'
+    "(999) 999-9999"
   );
 });
 ```
