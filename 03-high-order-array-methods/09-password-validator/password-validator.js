@@ -3,7 +3,9 @@ function validatePassword(password) {
 
   const isLengthValid = password.length >= 8;
 
-  const hasUppercase = passwordArr.some((char) => char === char.toUpperCase());
+  const hasUppercase = passwordArr.some(
+    (char) => char === char.toUpperCase() && char !== char.toLowerCase()
+  );
 
   const hasLowercase = password
     .split("")
